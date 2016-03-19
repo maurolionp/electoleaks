@@ -1,0 +1,102 @@
+<style>
+    .main-content{
+      width: 90px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 12px;
+    }
+    .map {
+      display: inline-block;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .q0-9 { fill:#FFFFFF; }
+    .q1-9 { fill:#F78181; }
+    .q2-9 { fill:#819FF7; }
+    .q3-9 { fill:#2E2EFE; }
+    .overlay {
+      fill: none;
+      pointer-events: all;
+    }
+    .label {
+      font-weight: bold;
+      text-anchor: middle;
+      cursor:default;
+    }
+    div.tooltip {
+      position: absolute;
+      text-align: center;
+      padding: 4px;
+      background: #fff;
+      border: 0px;
+      pointer-events: none;
+    }
+    #timeline{
+      width: 750px;
+      margin: 0 auto;
+    }
+    /* basic styling for the time-series elements */
+    .time-series {
+      width:50px;
+      background: #eee;
+      margin:0;
+      padding:0;
+      text-align:center;
+      line-height: 30px;
+      float: left;
+    }
+    /* styles for the active time-series element */
+    .active {
+      background: #b4b4b4;
+      color:white;
+    }
+    /* styles for the trend information */
+    .trend {
+      font-weight: bold;
+      font-size: 110%;
+    }
+    .pos {
+      color: #1a9850;
+    }
+    .neg {
+      color: #d73027;
+    }
+    .tHi:hover
+{
+    cursor: pointer;
+    background-color: #B0B0B0 !important;
+}
+  </style>
+
+
+<div class="row" style="float: none; margin: 0 auto;">
+  <div class="col-sm-6 col-md-4">
+    <h3>Lista de Candidatos a la Presidencia del Perú</h3>
+    <hr>
+    <div class="container">
+        <div class="row">
+          <div class="col-xs-2 text-center"></div>
+          <div class="col-xs-4"></div>
+          <div class="col-xs-2"></div>
+          </div>
+        <div class="row tHi" ng-repeat="candidato in candidatos" ng-click="showMapCandidate(candidato)">
+          <div class="col-xs-2 text-center"><img title="{{candidato.name}}" src="images/{{candidato.partyId}}.jpg" class="img-thumbnail img-responsive img-circle"></div>
+          <div class="col-xs-4"><br>{{candidato.name}}<br><b>{{candidato.party}}</b></div>
+          <div class="col-xs-2 text-center"><br><br><a ng-href='#/detail/{{candidato.partyId}}'>Ver más</a></div>
+        </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-2"></div>
+  <div class="clearfix visible-sm"></div>
+  <div class="col-sm-6 col-md-4">
+    <div class="container">
+      <br>
+      <br>
+      <h3>{{candidatetitle}}<br>{{candidatoselection}}</h3>
+      <br>
+      <div id="chart">
+      </div>
+    </div>
+  </div>
+
+</div>

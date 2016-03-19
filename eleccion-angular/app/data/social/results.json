@@ -1,0 +1,66 @@
+{
+    "tweets": [
+        2682, 
+        2712, 
+        12211, 
+        2764, 
+        3747, 
+        11302, 
+        2777, 
+        1544, 
+        10979, 
+        1965, 
+        4315, 
+        11540, 
+        2902, 
+        2467, 
+        12451, 
+        2062, 
+        3967, 
+        11791
+    ], 
+    "series": [
+        {
+            "values": [
+                15.23, 
+                15.52, 
+                18.15, 
+                11.03, 
+                16.29
+            ], 
+            "label": "Positivos"
+        }, 
+        {
+            "values": [
+                15.4, 
+                21.04, 
+                10.09, 
+                24.21, 
+                13.84
+            ], 
+            "label": "Negativos"
+        }, 
+        {
+            "values": [
+                69.36, 
+                63.45, 
+                71.76, 
+                64.76, 
+                69.87
+            ], 
+            "label": "Neutros"
+        }
+    ], 
+    "labels": [
+        "Accion Popular", 
+        "Fuerza Popular", 
+        "Peruanos por el Cambio", 
+        "Frente Amplio", 
+        "Alianza Popular"
+    ], 
+    "summary": [
+        15152, 
+        18752, 
+        70274
+    ]
+}
